@@ -1,10 +1,4 @@
 import React from "react";
-import {
-  FaCode,
-  FaGraduationCap,
-  FaLaptop,
-  FaLaptopCode,
-} from "react-icons/fa";
 
 function page() {
   return (
