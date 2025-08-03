@@ -1,118 +1,76 @@
 import React from "react";
+import { education, experience } from "../../contents/about";
 
 function page() {
   return (
     <div className="container py-20">
-      <h3 className="text-4xl font-bold text-center mb-8">About Me</h3>
+      <h3 className="text-4xl font-bold text-center mb-8 font-mono">
+        About Me
+      </h3>
       <section className="mb-16">
-        <p className="text-xl text-secondary max-w-3xl mx-auto text-center">
-          I'm a passionate web developer with expertise in creating responsive,
-          user-friendly websites using modern technologies. I focus on clean
-          code, performance, and delivering real-world solutions.
+        <p className="text-xl text-secondary max-w-7xl mx-auto text-center font-sans">
+          I am a MERN stack and Next.js developer with a strong interest in
+          building modern web applications. I create dynamic and responsive apps
+          using React.js, Next.js, Node.js, and MongoDB with a focus on
+          delivering easy-to-use and efficient solutions. I enjoy solving
+          complex problems and turning ideas into practical, user-friendly
+          experiences. My goal is to create apps that not only look great but
+          also perform smoothly.
         </p>
       </section>
 
-      {/* <section className="mb-16">
-        <h3 className="section-title">Skills</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all transform ">
-          <div className="ease-in-out duration-300 group  hover:scale-90">
-            <div className="bg-white dark:bg-dark p-6 rounded-lg shadow-md card cursor-pointer">
-              <FaCode className="size-6 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-              <ul className="text-secondary space-y-2 group-hover:translate-x-8 duration-300 ease-in-out">
-                <li>React / Next.js</li>
-                <li>Typescript / Javascript</li>
-                <li>Tailwind CSS</li>
-                <li>HTML / CSS3</li>
-              </ul>
-            </div>
-          </div>
-          <div className="ease-in-out duration-300 relative group hover:scale-90 ">
-            <div className=" bg-white dark:bg-dark p-6 rounded-lg shadow-md card cursor-pointer">
-              <FaLaptopCode className="size-6 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Backend</h3>
-              <ul className="text-secondary space-y-2 group-hover:translate-x-8 duration-300 ease-in-out">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className=" ease-in-out duration-300 group hover:scale-90">
-            <div className=" bg-white dark:bg-dark p-6 rounded-lg shadow-md card  cursor-pointer">
-              <FaGraduationCap className="size-6 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-              <ul className="text-secondary space-y-2  group-hover:translate-x-8 duration-300 ease-in-out ">
-                <li>Git / Github</li>
-                <li>Docker</li>
-                <li>AWS</li>
-                <li>CI / CD</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="mb-16">
-        <h2 className="section-title">Experiences</h2>
+        <h2 className="text-4xl font-bold text-center mb-8 font-mono">
+          Experiences
+        </h2>
         <div className="max-w-5xl mx-auto space-y-8 transition-all">
-          <div className="card relative cursor-pointer hover:scale-110 duration-300 ease-in-out">
-            <div className="dark:bg-dark bg-white backdrop-blur-sm p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-2">
-                Senior Full Stack Developer
-              </h3>
-              <p className="text-primary text-base mb-2">
-                Company Name. 2024 - Present
-              </p>
-              <ul className="text-secondary space-y-2 list-disc list-inside">
-                <li>
-                  Develop responsive web applications using React.js, Next.js,
-                  and TypeScript
-                </li>
-                <li>
-                  Integrate RESTful APIs and manage frontend state using Redux
-                  or Context API
-                </li>
-                <li>
-                  Translate Figma/Adobe XD designs into high-quality UI
-                  components using Tailwind CSS, HTML5, and CSS3
-                </li>
-              </ul>
+          {experience.map((experience, index) => (
+            <div
+              key={index}
+              className="card relative cursor-pointer hover:scale-110 duration-300 ease-in-out"
+            >
+              <div className="dark:bg-dark bg-white backdrop-blur-sm p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold font-mono mb-1">
+                  {experience.position}
+                </h3>
+                <p className="text-primary mb-6 text-sm">
+                  {experience.company}. {experience.duration}
+                </p>
+                <ul className="text-secondary space-y-1 list-disc list-inside">
+                  {experience.roles.map((role, index) => (
+                    <li key={index + 1}>{role}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="card relative cursor-pointer hover:scale-110 duration-300 ease-in-out">
-            <div className="dark:bg-dark bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-2">
-                Senior Full Stack Developer
-              </h3>
-              <p className="text-primary text-base mb-2">
-                Company Name. 2024 - Present
-              </p>
-              <ul className="text-secondary space-y-2 list-disc list-inside">
-                <li>
-                  Develop responsive web applications using React.js, Next.js,
-                  and TypeScript
-                </li>
-                <li>
-                  Integrate RESTful APIs and manage frontend state using Redux
-                  or Context API
-                </li>
-                <li>
-                  Translate Figma/Adobe XD designs into high-quality UI
-                  components using Tailwind CSS, HTML5, and CSS3
-                </li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       <section className="mb-16">
-        <h2 className="section-title">Education</h2>
+        <h2 className="text-4xl font-bold text-center mb-8 font-mono">
+          Education
+        </h2>
         <div className="max-w-5xl mx-auto space-y-8 transition-all">
-          <div className="card relative cursor-pointer hover:scale-110 duration-300 ease-in-out">
+          {education.map((education, index) => (
+            <div
+              key={index}
+              className="card relative cursor-pointer hover:scale-110 duration-300 ease-in-out"
+            >
+              <div className="dark:bg-dark bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-1 font-mono">
+                  {education.title}
+                </h3>
+                <p className="text-primary text-sm mb-3">
+                  {education.institute} {education.duration}
+                </p>
+                <p className="text-secondary text-base mb-2">
+                  {education.description}
+                </p>
+              </div>
+            </div>
+          ))}
+          {/* <div className="card relative cursor-pointer hover:scale-110 duration-300 ease-in-out">
             <div className="dark:bg-dark bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">
                 Bachelor Of Science Information Technology 💻
@@ -124,7 +82,7 @@ function page() {
                 Focused on Software Engineering and Web Developmet
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

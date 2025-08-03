@@ -1,9 +1,7 @@
 "use client";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import { error } from "console";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaLocationArrow, FaPhone } from "react-icons/fa";
+import { FaLocationArrow, FaPhone, FaEnvelope } from "react-icons/fa";
 interface Data {
   name: string;
   email: string;
@@ -73,7 +71,7 @@ function page() {
           </p>
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
-              <EnvelopeIcon className="size-6 text-primary" />
+              <FaEnvelope className="size-6 text-primary" />
               <div className="flex items-center space-x-5">
                 <h3 className="text-bold">Email to:</h3>
                 <Link

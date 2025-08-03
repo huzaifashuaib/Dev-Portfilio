@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { FaDev } from "react-icons/fa";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -31,8 +32,12 @@ const Navbar = () => {
         {/* <div className="max-w-6xl mx-auto fixed inset-x-0 top-6 rounded-full border-b border-gray-200 shadow-sm dark:border-gray-700 backdrop-blur-sm bg-white/40 dark:bg-dark/80 z-50"> */}
         {/* <div className="max-w-6xl mx-auto px-4"> */}
         {/* desktop Links */}
-        <Link href={"/"} className="text-xl font-bold text-primary">
-          Devfilo&trade;
+        <Link
+          href={"/"}
+          className="text-xl font-bold text-primary flex items-end font-mono"
+        >
+          <FaDev size={40} />
+          <span className="text-xs font-mono">.huz</span>
         </Link>
         <div className="hidden md:flex items-center space-x-8">
           {menuItems?.map((item) => {
