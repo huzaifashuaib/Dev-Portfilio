@@ -61,10 +61,14 @@ function page() {
   }, [status]);
   return (
     <div className="container py-20">
-      <h3 className="text-4xl font-bold text-center mb-16">Contact Me</h3>
+      <h3 className="text-4xl font-bold text-center mb-16 font-mono">
+        Contact Me
+      </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="space-y-8">
-          <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
+          <h3 className="text-2xl font-semibold mb-4 font-mono">
+            Get in Touch
+          </h3>
           <p className="text-secondary">
             I'm always open to disscusion new project, creative idea, or
             opportunities to be part of vision
@@ -73,7 +77,7 @@ function page() {
             <div className="flex items-center space-x-4">
               <FaEnvelope className="size-6 text-primary" />
               <div className="flex items-center space-x-5">
-                <h3 className="text-bold">Email to:</h3>
+                <h3 className="text-bold font-mono">Email to:</h3>
                 <Link
                   href={"mailto:huzaifashoaib7@gmail.com"}
                   className="text-secondary hover:text-primary"
@@ -86,7 +90,7 @@ function page() {
             <div className="flex items-center space-x-4">
               <FaPhone className="size-6 text-primary" />
               <div className="flex items-center space-x-5">
-                <h3 className="text-bold">Phone :</h3>
+                <h3 className="text-bold font-mono">Phone :</h3>
                 <Link
                   href={"tel:+92 3049436559"}
                   className="text-secondary hover:text-primary"
@@ -99,7 +103,7 @@ function page() {
             <div className="flex items-center space-x-4">
               <FaLocationArrow className="size-6 text-primary" />
               <div className="flex items-center space-x-5">
-                <h3 className="text-bold">Location :</h3>
+                <h3 className="text-bold font-mono">Location :</h3>
                 <p className="text-secondary hover:text-primary cursor-pointer">
                   Faisalabad
                 </p>
@@ -153,7 +157,7 @@ function page() {
             </div>
             <button
               type="submit"
-              className="w-full bg-primary py-4 rounded-lg text-white font-medium hover:bg-primary/80 cursor-pointer transition-colors duration-300 ease-in-out"
+              className="w-full bg-primary py-4 rounded-lg text-white font-medium hover:bg-primary/80 cursor-pointer transition-colors duration-300 ease-in-out font-mono"
             >
               {status === "loading" ? "Sending..." : "Send Message"}
             </button>

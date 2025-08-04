@@ -22,19 +22,22 @@ const Footer = () => {
           </div>
           <div className="flex space-x-6">
             <Link
-              href="/"
+              href="https://github.com/huzaifashuaib"
+              target="_blank"
               className="text-2xl md:text-3xl text-gray-600 hover:text-primary dark:text-gray-300 transition-all duration-300 transform hover:scale-125 ease-in-out hover:-translate-y-2"
             >
               <FaGithub />
             </Link>
             <Link
-              href="/"
+              href="https://www.linkedin.com/in/huzaifa-shuaib-797962212/"
+              target="_blank"
               className="text-2xl md:text-3xl text-gray-600 hover:text-primary dark:text-gray-300 transition-all duration-300 transform hover:scale-125 ease-in-out hover:-translate-y-2"
             >
               <FaLinkedin />
             </Link>
             <Link
-              href="/"
+              href="https://www.facebook.com/huzaifa.ojla/"
+              target="_blank"
               className="text-2xl md:text-3xl text-gray-600 hover:text-primary dark:text-gray-300 transition-all duration-300 transform hover:scale-125 ease-in-out hover:-translate-y-2"
             >
               <FaFacebook />

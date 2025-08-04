@@ -25,10 +25,9 @@ const Navbar = () => {
     { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact" },
   ];
-  console.log(isMenuOpen);
   return (
     <>
-      <div className=" fixed max-w-6xl mx-3 md:mx-auto flex items-center justify-between h-16 px-6 inset-x-0 top-5 rounded-full border border-gray-200 shadow-md dark:border-gray-700 backdrop-blur-sm bg-white/40 dark:bg-dark/80 z-40">
+      <div className=" fixed max-w-6xl mx-3 xl:mx-auto flex items-center justify-between h-16 px-6 inset-x-0 top-5 rounded-full border border-gray-200 shadow-md dark:border-gray-700 backdrop-blur-sm bg-white/40 dark:bg-dark/80 z-40">
         {/* <div className="max-w-6xl mx-auto fixed inset-x-0 top-6 rounded-full border-b border-gray-200 shadow-sm dark:border-gray-700 backdrop-blur-sm bg-white/40 dark:bg-dark/80 z-50"> */}
         {/* <div className="max-w-6xl mx-auto px-4"> */}
         {/* desktop Links */}
@@ -39,7 +38,7 @@ const Navbar = () => {
           <FaDev size={40} />
           <span className="text-xs font-mono">.huz</span>
         </Link>
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {menuItems?.map((item) => {
             const isActive = item.href === pathName;
             return (
@@ -48,7 +47,7 @@ const Navbar = () => {
                 href={item.href}
                 className={`font-mono ${
                   isActive && "text-primary font-bold "
-                } hover:text-primary transition-colors text-base `}
+                } hover:text-primary transition-colors text-sm`}
               >
                 &lt;{item.label} /&gt;
               </Link>
