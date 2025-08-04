@@ -44,23 +44,24 @@ const Blog = ({ title }: { title?: string }) => {
           {title}
         </h3>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {refineBlog.map((blog) => (
           <article
             key={blog.id}
-            className="bg-white dark:bg-dark/50 shadow-md rounded-lg p-6"
+            className="bg-white dark:bg-dark/50 shadow-md rounded-lg p-6 hover:border hover:border-slate-400 hover:rounded-md transition-all duration-400 ease-in-out group"
           >
             <Link
               href={`${blog.canonical_url}`}
+              target="_blank"
               className="flex flex-col h-full"
             >
-              <h3 className="text-xl font-semibold hover:text-primary mb-2 transition-all font-mono">
+              <h3 className="text-xl font-semibold group-hover:text-primary/80 mb-2 transition-all font-mono">
                 {blog.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 flex-1 flex text-base tracking-wide">
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-primary/80 mb-4 flex-1 flex text-base tracking-wide">
                 {blog.description}
               </p>
-              <div className="flex  justify-between text-gray-500 text-sm space-x-4 dark:text-gray-400">
+              <div className="flex  justify-between text-gray-500 group-hover:text-primary/80 text-sm space-x-4 dark:text-gray-400">
                 <span className="flex items-center font-mono">
                   <FaCalendar className="mr-2" />
                   {new Date(blog.published_timestamp).toLocaleDateString()}
