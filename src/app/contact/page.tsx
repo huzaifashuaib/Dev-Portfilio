@@ -85,10 +85,10 @@ const Page = () => {
             <div className="flex items-center space-x-4">
               <FaEnvelope className="size-6 text-primary" />
               <div className="flex items-center space-x-5">
-                <h3 className="text-bold font-mono">Email to:</h3>
+                <h3 className="hidden md:flex text-bold font-mono">Email:</h3>
                 <Link
                   href={"mailto:huzaifashoaib7@gmail.com"}
-                  className="text-secondary hover:text-primary"
+                  className="text-secondary hover:text-primary "
                 >
                   huzaifashoaib7@gmail.com
                 </Link>
@@ -98,7 +98,7 @@ const Page = () => {
             <div className="flex items-center space-x-4">
               <FaPhone className="size-6 text-primary" />
               <div className="flex items-center space-x-5">
-                <h3 className="text-bold font-mono">Phone :</h3>
+                <h3 className="hidden md:flex text-bold font-mono">Phone :</h3>
                 <Link
                   href={"tel:+92 3049436559"}
                   className="text-secondary hover:text-primary"
@@ -111,7 +111,9 @@ const Page = () => {
             <div className="flex items-center space-x-4">
               <FaLocationArrow className="size-6 text-primary" />
               <div className="flex items-center space-x-5">
-                <h3 className="text-bold font-mono">Location :</h3>
+                <h3 className="hidden md:flex text-bold font-mono">
+                  Location :
+                </h3>
                 <p className="text-secondary hover:text-primary cursor-pointer">
                   Faisalabad
                 </p>
