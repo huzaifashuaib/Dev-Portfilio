@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className=" bg-white text-white dark:bg-dark border-t border-gray-200 dark:border-gray-800">
       <div className="container py-8">
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between h-full">
           <div className="mb-4 md:mb-0">
             <Link
               href={"/"}

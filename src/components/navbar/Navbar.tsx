@@ -92,7 +92,7 @@ const Navbar = () => {
               <Link
                 onClick={toggleIsMenu}
                 href={item.href}
-                className="block py-2 hover:text-primary transition-colors"
+                className="block py-2 hover:text-primary transition-colors font-mono"
               >
                 {item.label}
               </Link>
