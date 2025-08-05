@@ -17,12 +17,35 @@ export const fadeIn = {
 };
 
 export const staggerContainer = {
-  animate: {
+  hidden: {},
+  show: {
     transition: {
       staggerChildren: 0.1,
+      delayChildren: 0.4,
     },
   },
 };
+// animation.ts
+
+export const fadeInUpp = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+// export const staggerContainer = {
+//   animate: {
+//     transition: {
+//       staggerChildren: 0.1,
+//     },
+//   },
+// };
 
 export const cardHover = {
   whileHover: { scale: 1.05 },

@@ -2,19 +2,20 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaLocationArrow, FaPhone, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeInUp, slideInLeft, slideInRight } from "@/utilities/animation";
 interface Data {
   name: string;
   email: string;
   msg: string;
 }
 type Status = "idle" | "loading" | "success" | "error" | null;
-function page() {
+const Page = () => {
   const [data, setData] = useState<Data>({
     name: "",
     email: "",
     msg: "",
   });
-  console.log(data);
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
@@ -24,7 +25,7 @@ function page() {
     }));
   };
   const [status, setStatus] = useState<Status>("idle");
-  const handleSubmit = async (e: React.FormEvent): Promise<any> => {
+  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
     setStatus("loading");
     try {
@@ -50,7 +51,6 @@ function page() {
       console.error(error);
     }
   };
-
   useEffect(() => {
     if (status === "success") {
       const timer = setTimeout(() => {
@@ -61,16 +61,24 @@ function page() {
   }, [status]);
   return (
     <div className="container py-20">
-      <h3 className="text-4xl font-bold text-center mb-16 font-mono">
+      <motion.h3
+        {...fadeInUp}
+        transition={{ delay: 0.1 }}
+        className="text-4xl font-bold text-center mb-16 font-mono"
+      >
         Contact Me
-      </h3>
+      </motion.h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="space-y-8">
+        <motion.div
+          {...slideInLeft}
+          transition={{ delay: 0.2 }}
+          className="space-y-8"
+        >
           <h3 className="text-2xl font-semibold mb-4 font-mono">
             Get in Touch
           </h3>
           <p className="text-secondary">
-            I'm always open to disscusion new project, creative idea, or
+            I&apos;m always open to disscusion new project, creative idea, or
             opportunities to be part of vision
           </p>
           <div className="space-y-4">
@@ -110,8 +118,12 @@ function page() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="bg-white dark:bg-dark p-6 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+          {...slideInRight}
+          transition={{ delay: 0.2 }}
+          className="bg-white dark:bg-dark p-6 rounded-lg shadow-md"
+        >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -172,10 +184,10 @@ function page() {
               </p>
             )}
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
-}
+};
 
-export default page;
+export default Page;

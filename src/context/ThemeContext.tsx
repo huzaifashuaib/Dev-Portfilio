@@ -33,7 +33,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     document.documentElement.classList.toggle("dark", initalTheme === "dark");
     setIsMount(true);
   }, []);
-  if (isMount) null;
+  if (!isMount) {
+    return null;
+  }
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
       {children}

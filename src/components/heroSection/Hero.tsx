@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import { fadeIn, fadeInUp, scaleIn } from "@/utilities/animation";
+import { fadeIn, fadeInDown, fadeInUp, scaleIn } from "@/utilities/animation";
 
 const Hero = () => {
   return (
@@ -29,7 +29,7 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           className="text-4xl font-bold md:text-6xl mb-6 font-mono titel-grediant "
         >
-          Hi I'm
+          Hi I&apos;m
         </motion.h1>
         <motion.h1
           {...fadeInUp}
@@ -75,7 +75,11 @@ const Hero = () => {
             <FaFacebook />
           </Link>
         </motion.div>
-        <div className="flex gap-4 flex-col md:flex-row w-full justify-center ">
+        <motion.div
+          {...fadeInDown}
+          transition={{ delay: 0.7 }}
+          className="flex gap-4 flex-col md:flex-row w-full justify-center "
+        >
           <a
             href={"/huzaifaCv.pdf"}
             download
@@ -89,7 +93,7 @@ const Hero = () => {
           >
             Contact Us
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

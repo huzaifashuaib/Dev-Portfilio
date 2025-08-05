@@ -13,8 +13,6 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const toggleIsMenu = (): void => setIsMenuOpen((prev) => !prev);
-  const [isDark, setIsDark] = useState<boolean>(false);
-  const toggleDarkMenu = (): void => setIsDark(!isDark);
 
   const pathName = usePathname();
   const menuItems = [

@@ -1,13 +1,25 @@
+"use client";
+
 import React from "react";
 import { education, experience } from "../../contents/about";
+import { motion } from "framer-motion";
+import { fadeInUp } from "@/utilities/animation";
 
 function page() {
   return (
     <div className="container py-20">
-      <h3 className="text-4xl font-bold text-center mb-8 font-mono">
+      <motion.h3
+        {...fadeInUp}
+        transition={{ delay: 0.1 }}
+        className="text-4xl font-bold text-center mb-8 font-mono"
+      >
         About Me
-      </h3>
-      <section className="mb-16">
+      </motion.h3>
+      <motion.section
+        {...fadeInUp}
+        transition={{ delay: 0.2 }}
+        className="mb-16"
+      >
         <p className="text-xl text-secondary max-w-7xl mx-auto text-center font-sans">
           I am a MERN stack and Next.js developer with a strong interest in
           building modern web applications. I create dynamic and responsive apps
@@ -17,9 +29,15 @@ function page() {
           experiences. My goal is to create apps that not only look great but
           also perform smoothly.
         </p>
-      </section>
+      </motion.section>
 
-      <section className="mb-16">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.025 }}
+        className="mb-16"
+      >
         <h2 className="text-4xl font-bold text-center mb-8 font-mono">
           Experiences
         </h2>
@@ -45,9 +63,15 @@ function page() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
-      <section className="mb-16">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.025 }}
+        className="mb-16"
+      >
         <h2 className="text-4xl font-bold text-center mb-8 font-mono">
           Education
         </h2>
@@ -84,7 +108,7 @@ function page() {
             </div>
           </div> */}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }
