@@ -15,7 +15,7 @@ const Project = ({ title }: { title?: string }) => {
           variants={fadeInUpp}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.02 }}
+          viewport={{ once: true, amount: 0.025 }}
           className="text-3xl font-bold text-center mb-12 font-mono"
         >
           Featured Project

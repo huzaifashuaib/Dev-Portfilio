@@ -1,3 +1,5 @@
+import { db } from "@/firebase/firebase";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
 interface postData {
@@ -6,10 +8,22 @@ interface postData {
   msg: string;
 }
 
-export const POST = async (request: Request) => {
+export const POST = async (req: Request) => {
   try {
-    (await request.json()) as postData;
+    const { name, email, msg } = await req.json();
+    if (!name || !email || !msg) {
+      return NextResponse.json(
+        { message: "Missing required fields" },
+        { status: 400 }
+      );
+    }
 
+    await addDoc(collection(db, "users"), {
+      name,
+      email,
+      msg,
+      createdAt: serverTimestamp(),
+    });
     return NextResponse.json({ message: "Successfully Sent" }, { status: 200 });
   } catch (error) {
     const errorMessage =
