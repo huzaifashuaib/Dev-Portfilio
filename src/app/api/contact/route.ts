@@ -2,12 +2,6 @@ import { db } from "@/firebase/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
-interface postData {
-  name: string;
-  email: string;
-  msg: string;
-}
-
 export const POST = async (req: Request) => {
   try {
     const { name, email, msg } = await req.json();
