@@ -21,16 +21,6 @@ export const education = [
 
 export const experience = [
   {
-    company: "TechloSet Solutions, Faisalabad",
-    position: "Junior Frontend Developer",
-    duration: "July 2024 - November 2024",
-    roles: [
-      "Developed responsive user interfaces using React.js and Tailwind CSS.",
-      "Worked partially on application development, contributing to both frontend and backend tasks.",
-      "Integrated frontend components with APIs and supported backend team in ensuring functional flows.",
-    ],
-  },
-  {
     company: "AgInfoTech",
     position: "Frontend Developer",
     duration: "December 2024 - Present",
@@ -38,6 +28,16 @@ export const experience = [
       "Built modern UIs and interactive components using React.js and Tailwind CSS.",
       "Developed full-stack features using Next.js including frontend and backend API routes.",
       "Collaborated closely with design and backend teams to deliver production-ready features.",
+    ],
+  },
+  {
+    company: "TechloSet Solutions, Faisalabad",
+    position: "Junior Frontend Developer",
+    duration: "July 2024 - November 2024",
+    roles: [
+      "Developed responsive user interfaces using React.js and Tailwind CSS.",
+      "Worked partially on application development, contributing to both frontend and backend tasks.",
+      "Integrated frontend components with APIs and supported backend team in ensuring functional flows.",
     ],
   },
 ];

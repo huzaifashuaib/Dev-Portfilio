@@ -65,12 +65,26 @@ const Navbar = () => {
           </button>
         </div>
         {/* Mobile Links */}
-        <button
-          className=" md:hidden rounded-xl p-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer "
-          onClick={toggleIsMenu}
-        >
-          <FaBarsStaggered className="size-6" />
-        </button>
+        <div className="md:hidden flex space-x-1">
+          <button
+            onClick={toggleTheme}
+            className={`cursor-pointer rounded-lg p-2 hover:bg-gray-100 hover:text-primary  dark:bg-gray-700 transition-all  transform duration-500 ease-in-out ${
+              theme === "dark" ? "rotate-90" : "rotate-0"
+            } `}
+          >
+            {theme === "dark" ? (
+              <SunIcon className="h-6 w-6" />
+            ) : (
+              <MoonIcon className=" h-6 w-6" />
+            )}
+          </button>
+          <button
+            className="  rounded-xl p-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer "
+            onClick={toggleIsMenu}
+          >
+            <FaBarsStaggered className="size-6" />
+          </button>
+        </div>
       </div>
       {/* </div> */}
       <div
@@ -98,7 +112,7 @@ const Navbar = () => {
               </Link>
             </div>
           ))}
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="cursor-pointer rounded-lg p-2 flex items-center gap-2 hover:bg-gray-100 border border-gray-400 hover:text-primary transition-colors dark:bg-gray-700 "
           >
@@ -113,7 +127,7 @@ const Navbar = () => {
                 Dark Mode
               </>
             )}
-          </button>
+          </button> */}
         </div>
       </div>
     </>

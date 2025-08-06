@@ -73,7 +73,7 @@ const Project = ({ title }: { title?: string }) => {
                 </Link>
                 {project.demoLink !== "" && (
                   <Link
-                    href={project.githubLink}
+                    href={project.demoLink}
                     target="_blank"
                     className="flex items-center gap-2 text-secondary hover:bg-primary transition-all px-2 py-1 rounded-full hover:text-white transform hover:-translate-y-2 font-mono"
                   >
