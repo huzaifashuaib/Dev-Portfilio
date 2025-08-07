@@ -18,7 +18,7 @@ const Project = ({ title }: { title?: string }) => {
           viewport={{ once: true, amount: 0.025 }}
           className="text-3xl font-bold text-center mb-12 font-mono"
         >
-          Featured Project
+          Featured Projects
         </motion.h3>
       )}
 

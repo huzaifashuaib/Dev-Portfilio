@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <Project title=" Featured Project" />
+      <Project title=" Featured Projects" />
       <Blog title=" Latest Blog Posts" />
     </div>
   );

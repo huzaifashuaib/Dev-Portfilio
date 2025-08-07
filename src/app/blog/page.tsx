@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div className="container py-20">
       <h2 className="text-4xl font-semibold text-center mb-16 font-mono">
-        Blog
+        Blogs
       </h2>
       <Blog />
     </div>
