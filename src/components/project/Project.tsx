@@ -9,7 +9,7 @@ import { staggerContainer, fadeInUpp } from "@/utilities/animation";
 
 const Project = ({ title }: { title?: string }) => {
   return (
-    <div className={`${title && "py-20"} container`}>
+    <div className={`${title && " py-2 md:py-20"} container`}>
       {title && (
         <motion.h3
           variants={fadeInUpp}
