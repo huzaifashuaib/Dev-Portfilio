@@ -20,7 +20,7 @@ function page() {
         transition={{ delay: 0.2 }}
         className="mb-16"
       >
-        <p className="text-xl text-secondary max-w-6xl mx-auto text-center font-sans">
+        <p className="text-xl text-secondary max-w-7xl mx-auto text-center font-sans">
           I am a MERN stack and Next.js developer with a strong interest in
           building modern web applications. I create dynamic and responsive apps
           using React.js, Next.js, Node.js, and MongoDB with a focus on
