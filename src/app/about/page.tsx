@@ -41,7 +41,7 @@ function page() {
         <h2 className="text-4xl font-bold text-center mb-8 font-mono">
           Experiences
         </h2>
-        <div className="max-w-5xl mx-auto space-y-8 transition-all">
+        <div className="max-w-6xl mx-auto space-y-8 transition-all">
           {experience.map((experience, index) => (
             <div
               key={index}
